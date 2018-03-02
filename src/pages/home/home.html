@@ -1,14 +1,13 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      個人資料
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <p [style.color] = 'textcolor'>我的學校: {{school}}</p>
+  <p [style.color] = 'textcolor'>我的名字: {{name}}</p>
+  <img [src] = 'imgURL' />
 </ion-content>
