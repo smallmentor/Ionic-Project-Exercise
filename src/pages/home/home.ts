@@ -1,18 +1,16 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import {Observable} from 'rxjs/Observable';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
+
 export class HomePage {
+  Tab1Page:string = 'Tab1Page'
+  Tab2Page:string = 'Tab2Page'
 
-  school:string = '南台科技大學';
-  name:string = '鍾小師';
-  textColor:string = '#333';
-  imgURL:string = 'assets/imgs/mugShot.jpg';
-  constructor(public navCtrl: NavController) {
-    
+  constructor(public navCtrl: NavController) {     
   }
-
 }

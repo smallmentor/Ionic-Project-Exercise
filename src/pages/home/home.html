@@ -1,13 +1,4 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      個人資料
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  <p [style.color]='textColor'>我的學校: {{school}}</p>
-  <p [style.color]='textColor'>我的名字: {{name}}</p>
-  <img [src]='imgURL'>
-</ion-content>
+<ion-tabs>
+  <ion-tab [root]='Tab1Page' tabTitle='設定' tabIcon='alarm'></ion-tab>
+  <ion-tab [root]='Tab2Page' tabTitle='優惠' tabIcon='cart'></ion-tab>
+</ion-tabs>
