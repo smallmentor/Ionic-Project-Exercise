@@ -7,9 +7,9 @@
 <ion-header>
 
   <ion-navbar>
-    <button ion-button icon-only menuToggle>
-      <ion-icon name='menu'></ion-icon>
-    </button>
+      <button ion-button icon-only menuToggle>
+          <ion-icon name='menu'></ion-icon>
+          </button>
     <ion-title>tab2</ion-title>
   </ion-navbar>
 
@@ -17,5 +17,17 @@
 
 
 <ion-content padding>
-    <button ion-button (click)='toTab1()'>前往Tab1</button>
+    <ion-list no-lines>
+        <ion-item>
+          <ion-label stacked>帳號</ion-label>
+          <ion-input placeholder='請輸入帳號' [(ngModel)]='account'></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>密碼</ion-label>
+            <ion-input type='password' placeholder='請輸入密碼' [(ngModel)]='password'></ion-input>
+        </ion-item>
+        <ion-item>
+            <button ion-button full large (click)='login()'>登 入</button>
+        </ion-item>  
+      </ion-list>
 </ion-content>

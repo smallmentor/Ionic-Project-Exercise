@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams,Events } from 'ionic-angular';
 
 /**
  * Generated class for the Tab2Page page.
@@ -14,15 +14,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'tab2.html',
 })
 export class Tab2Page {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  account:string='';password:string='';
+  constructor(public navCtrl: NavController, public navParams: NavParams,public event:Events) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Tab2Page');
   }
-  toTab1() {
-    this.navCtrl.parent.select(0)
+  login() {
+    this.event.publish('backData',{acc:this.account,pass:this.password});
+    this.navCtrl.pop();
   }
 
 }
