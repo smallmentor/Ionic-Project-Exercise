@@ -27,7 +27,7 @@ export class HomePage {
        zoom:17,
        center: {lat: this.lat, lng: this.lon}
     });
-    let constr='<p>臺南市永康區南台街1號</p>';
+    let constr='<p>臺南市永康區南台街1號(南台科大)</p>';
     let infowindow = new google.maps.InfoWindow({
        content: constr     
     });
